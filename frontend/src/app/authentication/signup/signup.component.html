@@ -1,0 +1,76 @@
+<form class="signupForm" [formGroup]="signupForm">
+  <input
+    placeholder="Nombre"
+    type="text"
+    formControlName="name"
+    class="very-small"
+  />
+  <small
+    class="error"
+    *ngIf="
+      signupForm.get('name').hasError('required') &&
+      signupForm.get('name').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <input
+    placeholder="Correo electrónico"
+    type="email"
+    formControlName="email"
+    class="very-small"
+  />
+  <small
+    class="error"
+    *ngIf="
+      signupForm.get('email').hasError('required') &&
+      signupForm.get('email').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <small class="error" *ngIf="signupForm.get('email').hasError('email')">
+    Ingresa un correo valido
+  </small>
+  <input
+    placeholder="Fecha de nacimiento"
+    type="date"
+    formControlName="date"
+    class="very-small"
+  />
+  <small
+    class="error"
+    *ngIf="
+      signupForm.get('date').hasError('required') &&
+      signupForm.get('date').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <input
+    placeholder="Contraseña"
+    type="password"
+    formControlName="password"
+    class="very-small"
+  />
+  <small
+    class="error"
+    *ngIf="
+      signupForm.get('password').hasError('required') &&
+      signupForm.get('password').touched
+    "
+    >Ups, por favor ingresa los datos para continuar</small
+  >
+  <small class="error" *ngIf="signupForm.get('password').hasError('minlength')">
+    la contraseña es demasiado corta minimo 6 caracteres
+  </small>
+  <button
+    (click)="enviarInformacion(signupForm)"
+    class="white rbt-300 small"
+    type="submit"
+    [disabled]="signupForm.invalid"
+  >
+    Regístrate
+  </button>
+  <p *ngIf="menorEdad == true" class="error">
+    ¡Ups!, ingresa datos validos
+  </p>
+  <a routerLink="/home" class=" very-small rbt-300">Regresar</a>
+</form>

@@ -1,0 +1,44 @@
+<div class="contenedorPopUpInfo">
+  <div class="encabezadoPopup">
+    <h1 class="nombrePelicula margin5 normal">{{ movie.title | titlecase }}</h1>
+    <div class="agregarFav">
+      <div class="icons">
+        <div
+          class="favIcon1"
+          (click)="enviarFavorito(movie)"
+          *ngIf="esFavorito"
+        ></div>
+        <div
+          class="favIcon2"
+          (click)="enviarFavorito(movie)"
+          *ngIf="!esFavorito"
+        ></div>
+        <div class="infoUser intermedioSize">Agregar a favoritos</div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <p class="margin5 very-small"><b>Género:</b> {{ movie.genre }}</p>
+  <p class="margin5 very-small"><b>Director:</b> {{ movie.director }}</p>
+  <p class="margin5 very-small"><b>Actores:</b> {{ movie.actors }}</p>
+  <p class="margin5 very-small"><b>Duración:</b> {{ movie.duration }}</p>
+  <p class="margin5 very-small text"><b>Sinopsis:</b> {{ movie.synopsis }}</p>
+  <iframe
+    width="75%"
+    height="310px"
+    [src]="srcMovie"
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    class="margin5"
+  ></iframe>
+  <div class="footerPopup">
+    <button
+      class="botonVerPelicula normal"
+      (click)="close()"
+      routerLink="/reproductor"
+    >
+      Ver película
+    </button>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+<div class="contenedorGlobal">
+  <app-nav-genders id="up"></app-nav-genders>
+  <app-releases></app-releases>
+  <div class="barraYContenido">
+    <div class="barraLateral white normal rbt-300">
+      <ul>
+        <li class="genero listaGenero">
+          <a href="#Drama" class="link gray genreTitleMenu" target="_self">
+            Drama
+          </a>
+        </li>
+        <li class="genero listaGenero">
+          <a href="#Comedia" class="link gray genreTitleMenu">
+            Comedia
+          </a>
+        </li>
+        <li class="genero listaGenero">
+          <a href="#Romance" class="link gray genreTitleMenu">
+            Romance
+          </a>
+        </li>
+        <li class="genero listaGenero">
+          <a href="#Anime" class="link gray genreTitleMenu">
+            Anime
+          </a>
+        </li>
+        <a href="#up"><mat-icon>arrow_upward</mat-icon></a>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="padding20" id="Drama">
+        <p class="light-white rbt-300 medium">
+          Descubre y disfruta tus películas favoritas
+        </p>
+        <p class="white medium rbt-300 genreTitle">Drama</p>
+        <div class="gridPeliculas">
+          <div *ngFor="let dramaMovie of dramaMovies" class="movieWrapper">
+            <img
+              [src]="dramaMovie.image"
+              alt=""
+              class="imagenPelicula"
+              (click)="mostrarPelicula(dramaMovie)"
+            />
+            <p class="white small rbt-300">
+              {{ dramaMovie.title | titlecase }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="padding20" id="Comedia">
+        <p class="white medium rbt-300 genreTitle">Comedia</p>
+        <div class="gridPeliculas">
+          <div *ngFor="let comedyMovie of comedyMovies" class="movieWrapper">
+            <img
+              [src]="comedyMovie.image"
+              alt=""
+              class="imagenPelicula"
+              (click)="mostrarPelicula(comedyMovie)"
+            />
+            <p class="white small rbt-300">
+              {{ comedyMovie.title | titlecase }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="padding20" id="Romance">
+        <p class="white medium rbt-300 genreTitle">Romance</p>
+        <div class="gridPeliculas">
+          <div class="movieWrapper" *ngFor="let romanceMovie of romanceMovies">
+            <img
+              [src]="romanceMovie.image"
+              alt=""
+              class="imagenPelicula"
+              (click)="mostrarPelicula(romanceMovie)"
+            />
+            <p class="white small rbt-300">
+              {{ romanceMovie.title | titlecase }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="padding20" id="Anime">
+        <p class="white medium rbt-300 genreTitle">Anime</p>
+        <div class="gridPeliculas">
+          <div *ngFor="let animeMovie of animeMovies" class="movieWrapper">
+            <img
+              [src]="animeMovie.image"
+              alt=""
+              class="imagenPelicula"
+              (click)="mostrarPelicula(animeMovie)"
+            />
+            <p class="white small rbt-300">
+              {{ animeMovie.title | titlecase }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

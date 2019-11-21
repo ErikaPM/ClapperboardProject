@@ -1,0 +1,37 @@
+<form [formGroup]="actualizarPeliForm" class="formularioActuPelicula">
+  <mat-form-field>
+    <label class="selectFile">Título de la película</label>
+    <input matInput formControlName="title" type="text" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <label class="selectFile">Género</label>
+    <input matInput formControlName="genre" type="text" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <label class="selectFile">Director</label>
+    <input matInput formControlName="director" type="text" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <label class="selectFile">Duración</label>
+    <input matInput formControlName="duration" type="text" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <label class="selectFile">Protagonistas</label>
+    <input matInput formControlName="actors" type="text" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <label class="selectFile">Sinópsis</label>
+    <input matInput formControlName="synopsis" type="text" />
+  </mat-form-field>
+
+  <mat-slide-toggle [checked]="releaseValue" formControlName="release">
+    <p class="rbt-300">Esta película es un estreno</p>
+  </mat-slide-toggle>
+
+  <button (click)="onSubmit()" class="botonGuardar small white">Guardar</button>
+</form>

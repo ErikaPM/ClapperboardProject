@@ -1,0 +1,71 @@
+.contenedorGlobal {
+  background-image: linear-gradient(rgba(25, 18, 87, 1), rgba(25, 18, 87, 1));
+  background-size: cover;
+  background-position: center;
+}
+.genero {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+.barraLateral {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  width: 10vw;
+  padding-top: 10px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 15px;
+}
+.listaGenero {
+  margin-bottom: 50%;
+}
+.barraYContenido {
+  display: flex;
+  flex-direction: row;
+}
+.imagenPelicula {
+  width: 11vw;
+  height: 200px;
+  border-radius: 1%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.imagenPelicula:hover {
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid white;
+  opacity: 1;
+}
+.padding20 {
+  padding: 20px;
+}
+.genreTitle {
+  margin-bottom: 15px;
+}
+.content {
+  width: 90vw;
+}
+.genreTitleMenu {
+  color: rgba(255, 255, 255, 0.2);
+}
+.genreTitleMenu:hover {
+  color: white;
+}
+.gridPeliculas {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.movieWrapper {
+  width: 100px;
+}
+mat-icon {
+  color: rgba(255, 17, 128, 1);
+}
+mat-icon:hover {
+  color: rgba(255, 17, 128, 0.6);
+}

@@ -1,0 +1,88 @@
+.wrapper {
+  background-image: linear-gradient(
+      rgba(25, 18, 87, 0.5),
+      rgba(25, 18, 87, 0.5)
+    ),
+    url(../../assets/admin/background-1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.agregarPelicula {
+  font-family: "Roboto", sans-serif;
+  border: none;
+  border-radius: 5rem;
+  color: gray;
+  font-size: 16px;
+  background-color: #ff1180;
+  cursor: pointer;
+  color: white;
+  height: 40px;
+  width: 140px;
+  justify-self: end;
+}
+.admin {
+  padding: 5vh 12vw;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 70px);
+}
+td {
+  height: 40px;
+  font-family: "Roboto", sans-serif;
+}
+th {
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+.botonEditar {
+  height: 50px;
+  width: 50px;
+  border-radius: 6px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 10px;
+  background: white;
+}
+.botonBorrar {
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  background: white;
+}
+mat-table {
+  width: 100%;
+  text-align: center;
+  height: 49vh;
+}
+.cadauna {
+  box-sizing: border-box;
+  width: 80px;
+  height: 80px;
+  margin: 2%;
+}
+.adminHeader {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  margin-bottom: 2%;
+}
+mat-icon {
+  color: lightgray;
+}
+:host ::ng-deep .mat-tab-label {
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+}
+.adminHeader > p {
+  margin-bottom: 0;
+}
+:host ::ng-deep .mat-tab-body.mat-tab-body-active {
+  background-color: white;
+  padding: 15px 100px;
+}

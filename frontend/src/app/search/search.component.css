@@ -1,0 +1,82 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+/*Fondo para nav importado*/
+.fondo {
+  background-color: #191257;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  background-repeat: repeat-y;
+}
+/*"HEADER"*/
+
+.wrapper {
+  font-family: "Roboto", sans-serif;
+}
+header {
+  background-image: linear-gradient(
+    rgba(25, 18, 87, 0.5),
+    rgba(25, 18, 87, 0.5)
+  );
+  background-size: cover;
+  background-position: center;
+  height: 88.7vh;
+  min-width: fit-content;
+
+  display: grid;
+  justify-content: center;
+}
+.row {
+  justify-content: center;
+}
+.row input {
+  width: 50%;
+}
+.row select {
+  width: 20%;
+}
+/*Contenedor de peliculas*/
+.content {
+  height: auto;
+  background-color: #191257;
+  min-height: calc(100vh - 70px - 122px);
+}
+.gridPeliculas {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(auto-fill, min-max(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.padding20 {
+  padding: 20px;
+}
+/*estilos de peliculas*/
+.peliculas {
+  align-self: center;
+}
+
+.imgPeliculas {
+  width: 12vw;
+  height: 200px;
+  border-radius: 1%;
+  cursor: pointer;
+}
+.imgPeliculas:hover {
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+
+.titulo {
+  justify-self: left;
+  margin-top: 2%;
+}
+
+.director {
+  justify-self: left;
+}
+
+.movieSelector {
+  width: 50px;
+}
